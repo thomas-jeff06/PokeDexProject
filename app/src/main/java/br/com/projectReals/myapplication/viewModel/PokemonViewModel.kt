@@ -1,4 +1,4 @@
-package br.com.projectReals.myapplication.api.viewModel
+package br.com.projectReals.myapplication.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,11 +20,11 @@ class PokemonViewModel : ViewModel() {
 
         pokemonsApiResult?.results?.let {
             pokemons.postValue(it.map { pokemonResult ->
-                val parameterId = pokemonResult.url
-                    .replace("https://pokeapi.con/api/v2/pokemon/", "")
-                    .replace("/", "").toLong()
+                val id = pokemonResult.url
+                    .replace("https://pokeapi.co/api/v2/pokemon/", "")
+                    .replace("/", "").toInt()
 
-                val pokemonApiResult = PokemonRepository.getPokemonById(parameterId)
+                val pokemonApiResult = PokemonRepository.getPokemonById(id)
 
                 pokemonApiResult?.let {
                     Pokemon(

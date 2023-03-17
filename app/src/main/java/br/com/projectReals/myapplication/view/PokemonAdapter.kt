@@ -16,6 +16,7 @@ class PokemonAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.pokemon_item, parent, false)
+
         return ViewHolder(view)
     }
 
@@ -36,7 +37,7 @@ class PokemonAdapter(
             val tvType2 = findViewById<TextView>(R.id.tvType2)
 
             item?.let {
-                Glide.with(itemView).load(it.imageUrl).into(ivPokemonImage)
+                Glide.with(itemView.context).load(it.imageUrl).into(ivPokemonImage) // carregar IMG da ULR String recebida
 
                 tvId.text = "Nº ${item.formattedNumber}"
                 tvName.text = item.formattedName

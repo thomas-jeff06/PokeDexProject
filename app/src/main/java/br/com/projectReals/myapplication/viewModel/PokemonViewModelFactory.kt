@@ -1,4 +1,4 @@
-package br.com.projectReals.myapplication.api.viewModel
+package br.com.projectReals.myapplication.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

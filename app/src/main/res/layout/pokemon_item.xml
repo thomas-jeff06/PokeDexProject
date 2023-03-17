@@ -29,7 +29,6 @@
             android:layout_marginEnd="8dp"
             android:contentDescription="Pokemon image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,15 +50,11 @@
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginEnd="45dp"
             android:textColor="#313131"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="384dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvId"
             tools:text="NomeTeste" />
 
         <LinearLayout
